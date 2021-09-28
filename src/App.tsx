@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Deck from "./components/Deck";
+import "./App.css";
+import { workers } from "./data/workers";
 
 function App() {
+
+  const onChange = (data: any) => {
+    console.log('do something with data...', data);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="flc tc">
+      <header>
+        <img src="/mi3-logo.png" alt="mission impossible" />
       </header>
+      <p className="text-large">Position: Stunt double</p>
+      <div className="flc">
+        <Deck cards={workers} onChange={onChange} />
+      </div>
     </div>
   );
 }
