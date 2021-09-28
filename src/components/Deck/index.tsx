@@ -29,7 +29,7 @@ const Deck = (props: Props) => {
 
   useEffect(() => {
     onChange({ likedWorkers, dislikedWorkers });
-  }, [likedWorkers, dislikedWorkers, onChange])
+  }, [likedWorkers, dislikedWorkers, onChange]);
 
   useEffect(() => {
     if (hasCards) {
